@@ -1,4 +1,4 @@
-# Cimas
+# Cimas ![cimas.png](./cimas.png)
 
 ##  [01.MOTIVACION](01.MOTIVACION.md)
 ##  [02.RESUMEN](02.RESUMEN.md)
