@@ -1,6 +1,6 @@
 //![cimas.png](CIMAS.png)
 <p align="center">
-  <img src="url/de/tu/imagen.png" alt="Texto alternativo">
+  <img src="cimas.png" alt="Texto alternativo">
 </p>
 # Cimas
 
