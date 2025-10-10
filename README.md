@@ -1,4 +1,7 @@
-![cimas.png](CIMAS.png)
+//![cimas.png](CIMAS.png)
+<p align="center">
+  <img src="url/de/tu/imagen.png" alt="Texto alternativo">
+</p>
 # Cimas
 
 ##  [01.MOTIVACION](01.MOTIVACION.md)
