@@ -1,4 +1,4 @@
-![cimas.png](CIMAS.png)
+![cimas.png](/images/CIMAS.png)
 # Cimas
 
 ##  [01.MOTIVACION](01.MOTIVACION.md)
