@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PeakPro - Iniciar Sesión</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cf17", // Overriding with user's request: "#16A085" (pine green)
+                        "background-light": "#f6f8f6", // Overriding with user's request: "#ECF0F1" (off-white)
+                        "background-dark": "#112111", // Overriding with user's request: "#2C3E50" (dusk blue)
+                        "primary-cta": "#16A085", // Pine Green
+                        "secondary-cta": "#E67E22", // Sunset Orange
+                        "text-light": "#2C3E50", // Dusk blue for light mode text
+                        "text-dark": "#ECF0F1", // Off-white for dark mode text
+                        "text-subtle-light": "#34495E", // Stone grey for subtle light text
+                        "text-subtle-dark": "#bdc3c7", // Lighter grey for subtle dark text
+                        "border-light": "#bdc3c7",
+                        "border-dark": "#34495E"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat opacity-20 dark:opacity-10"
+            data-alt="A subtle, moody image of mountain peaks at dusk."
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0bJDPUZmcgbi37YbqoOrXoD8hIgSp3XYil1eu2uDjJKkA1fuUsDdnLjsPSNTHJTU7g1KKKR_-2-GCFYRnXi4XskvASUGsXQJSHowKpiEJTB9BGWCpEQY3MrvnMRDoaw6acdn3mf_YmAd84rOUswdS0A4oDe5K6CSALjy081ChuEzmehw70uHmou7h2dwVrpBkX6vx7jrLdhjLKAcIp3aeOkYIJsx77vi4bDJVeqgS25mMf4zGS7mglkwQgv3y1xtxCDte64U6Cw");'>
+        </div>
+        <div class="relative z-10 flex w-full max-w-sm flex-col items-center">
+            <!-- Logo -->
+            <div class="mb-4 text-center">
+                <span class="material-symbols-outlined text-5xl text-primary-cta">filter_hdr</span>
+            </div>
+            <!-- Headline/Slogan -->
+            <h1 class="mb-6 text-center text-3xl font-bold tracking-tight text-text-light dark:text-text-dark">Conquista
+                tu próxima cima</h1>
+            <!-- Login Form -->
+            <div class="w-full space-y-4">
+                <!-- Email Field -->
+                <label class="flex flex-col">
+                    <p class="pb-2 text-base font-medium leading-normal text-text-light dark:text-text-dark">Email</p>
+                    <input
+                        class="form-input h-14 w-full flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light/80 p-[15px] text-base font-normal leading-normal text-text-light placeholder:text-text-subtle-light focus:border-primary-cta focus:outline-0 focus:ring-2 focus:ring-primary-cta/30 dark:border-border-dark dark:bg-background-dark/80 dark:text-text-dark dark:placeholder:text-text-subtle-dark dark:focus:border-primary-cta"
+                        placeholder="Tu dirección de email" value="" />
+                </label>
+                <!-- Password Field -->
+                <label class="flex flex-col">
+                    <p class="pb-2 text-base font-medium leading-normal text-text-light dark:text-text-dark">Contraseña
+                    </p>
+                    <div class="flex w-full flex-1 items-stretch">
+                        <input
+                            class="form-input h-14 flex-1 resize-none overflow-hidden rounded-l-lg border-y border-l border-border-light bg-background-light/80 p-[15px] pr-2 text-base font-normal leading-normal text-text-light placeholder:text-text-subtle-light focus:border-primary-cta focus:outline-0 focus:ring-2 focus:ring-primary-cta/30 dark:border-border-dark dark:bg-background-dark/80 dark:text-text-dark dark:placeholder:text-text-subtle-dark dark:focus:border-primary-cta"
+                            placeholder="Tu contraseña" type="password" value="" />
+                        <div
+                            class="flex cursor-pointer items-center justify-center rounded-r-lg border-y border-r border-border-light bg-background-light/80 px-[15px] text-text-subtle-light dark:border-border-dark dark:bg-background-dark/80 dark:text-text-subtle-dark">
+                            <span class="material-symbols-outlined text-2xl">visibility_off</span>
+                        </div>
+                    </div>
+                </label>
+                <!-- Forgot Password Link -->
+                <div class="text-right">
+                    <a class="text-sm font-medium text-text-subtle-light hover:text-primary-cta dark:text-text-subtle-dark dark:hover:text-primary-cta"
+                        href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+            <!-- Primary CTA Button -->
+            <button
+                class="mt-8 flex h-14 w-full items-center justify-center rounded-lg bg-primary-cta px-6 text-base font-bold text-white shadow-lg shadow-primary-cta/20 transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
+                Iniciar Sesión
+            </button>
+            <!-- Secondary Link/Button -->
+            <p class="mt-6 text-center text-sm text-text-light dark:text-text-dark">
+                ¿Aún no tienes cuenta? <a class="font-bold text-primary-cta hover:underline" href="#">Regístrate</a>
+            </p>
+            <!-- Social Login Separator -->
+            <div class="my-8 flex w-full items-center gap-4">
+                <hr class="flex-grow border-t border-border-light dark:border-border-dark" />
+                <span class="text-xs font-medium text-text-subtle-light dark:text-text-subtle-dark">O continúa
+                    con</span>
+                <hr class="flex-grow border-t border-border-light dark:border-border-dark" />
+            </div>
+            <!-- Social Login Buttons -->
+            <div class="flex w-full items-center justify-center gap-4">
+                <button
+                    class="flex h-12 w-12 items-center justify-center rounded-full border border-border-light bg-background-light/80 transition-transform duration-200 ease-in-out hover:scale-105 dark:border-border-dark dark:bg-background-dark/80">
+                    <img alt="Google logo" class="h-6 w-6"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK4zpmkk6nfWDRWYMtsUJb77Ks5IafnIIlpD-jZCdqva9zpAjkS-xnsZuem8rpJGnOCylXWmyYnQG1r4Ogo0uLxvmOK33h5mX1HI9LHt21aCx708nYf9YOheSlCDkWedz60xcJqe9q6C6SeeC6uzhSr2axBGz3cdzySuewujdn615Lr_C5lOJJpm9rTq4SokiJpDUnOMY5HNs_M6EKQtnAJw2bHZ362_S3jYLmebXtaX4OR6SKqSvT9GtXUubCskDR2HtLOBdeEA" />
+                </button>
+                <button
+                    class="flex h-12 w-12 items-center justify-center rounded-full border border-border-light bg-background-light/80 transition-transform duration-200 ease-in-out hover:scale-105 dark:border-border-dark dark:bg-background-dark/80">
+                    <img alt="Apple logo" class="h-6 w-6 invert dark:invert-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl4d3PrWFYhW0ZYa1iuEQ4DQ6mkxdmZlBvMsqUBR7E91ggwQg4GTNtSzk27jObmQh97RALM0MGFZZbDSIPNFTozpD1CBkcmPFafiX7Hbb-b-VSLL82h4D9BOVugmzYjigIUHvcdbqgd8gfVmc_dvmh04wQ1SNdhfi2Wy0SvMWZK-dNvK1x1MIF5KYc_V5Q8udqLFxkWgBdKNBkEd0ukeJJ9dFwbOdPBYaI9OiO8-eIKOcKgFhOEmNkstGAkCshfECirsKh6-jbvw" />
+                </button>
+                <button
+                    class="flex h-12 w-12 items-center justify-center rounded-full border border-border-light bg-background-light/80 transition-transform duration-200 ease-in-out hover:scale-105 dark:border-border-dark dark:bg-background-dark/80">
+                    <img alt="Facebook logo" class="h-6 w-6"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1GExABo1zqsmcBV4mTvK_aa87d16s-HGEj2FW93NN6R_uauWOQnSWt2pFDr4GKlwgFPjZncg8sncJh66SS6Sp3njV9V5Vsz-CGdUTKZC-isBf86OHuYSmW3yuL__alGScUK4h7K5hEWng0bSxSfMWlFEJ5LnZs3tArh_fFF9_pCP-5EswqwkkhJ7mpxu5dcPFCWtocLgEPsWHaFLN7Nt8_ZJY6a4MKiiOmIremufmqc_UhlBo5I4hlL2-p4w4VRvBtJStrFb6Og" />
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clasificación Global</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#365345",
+                        "background-light": "#F7F9FA",
+                        "background-dark": "#0A0C0E",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#161A1D",
+                        "text-primary-light": "#2C3E50",
+                        "text-primary-dark": "#E1E3E6",
+                        "text-secondary-light": "#565D6D",
+                        "text-secondary-dark": "#9BA1A6",
+                        "accent": "#F39C12"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings:
+                'FILL' 1
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 bg-repeat bg-center"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ2-8dTpRfAgOaV4rg6bW9Nwwi_Tp1_X_AQgIbXxGTvxvx0lZ2KqKS_PDnlKmXICw4G5mh5DLmstqgiQyyxXB2dKQwuAzYzas_UTakcE0C2JdzYol1bGVbLJees3bqxxOWNP8_WHgsoVtQt5S5dnSuSOBGC3Mq510wzvWkopPG4Ny-LScA7I1T9GvS2zwXLN55CqQeUeKZXmqUNj8LoNnjxsoD4wKptI0SF8vB6sMpSBuOTfbT7s6zXZgw0FLpq33OQeQGXEXWKA'); opacity: 0.02;">
+        </div>
+        <div class="relative z-10">
+            <!-- Top App Bar -->
+            <div
+                class="flex items-center p-4 pb-2 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0">
+                <button
+                    class="text-text-primary-light dark:text-text-primary-dark flex size-12 shrink-0 items-center justify-center">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <h1
+                    class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">
+                    Clasificación Global</h1>
+            </div>
+            <!-- Segmented Buttons -->
+            <div class="flex px-4 py-3">
+                <div
+                    class="flex h-10 flex-1 items-center justify-center rounded-xl bg-gray-200/50 dark:bg-surface-dark p-1">
+                    <label
+                        class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-surface-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-text-primary-light has-[:checked]:dark:text-text-primary-dark text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal transition-all">
+                        <span class="truncate">Puntos</span>
+                        <input checked="" class="invisible w-0" name="leaderboard-filter" type="radio" value="Puntos" />
+                    </label>
+                    <label
+                        class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-surface-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-text-primary-light has-[:checked]:dark:text-text-primary-dark text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal transition-all">
+                        <span class="truncate">Cimas</span>
+                        <input class="invisible w-0" name="leaderboard-filter" type="radio" value="Cimas" />
+                    </label>
+                    <label
+                        class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-surface-light has-[:checked]:dark:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-text-primary-light has-[:checked]:dark:text-text-primary-dark text-text-secondary-light dark:text-text-secondary-dark text-sm font-medium leading-normal transition-all">
+                        <span class="truncate">Metros</span>
+                        <input class="invisible w-0" name="leaderboard-filter" type="radio" value="Metros Ascendidos" />
+                    </label>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="px-4 py-3">
+                <label class="flex flex-col min-w-40 h-12 w-full">
+                    <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                        <div
+                            class="text-text-secondary-light dark:text-text-secondary-dark flex border-none bg-gray-200/50 dark:bg-surface-dark items-center justify-center pl-4 rounded-l-xl border-r-0">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-text-primary-light dark:text-text-primary-dark focus:outline-0 focus:ring-0 border-none bg-gray-200/50 dark:bg-surface-dark h-full placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark px-4 pl-2 text-base font-normal leading-normal"
+                            placeholder="Buscar montañistas" value="" />
+                    </div>
+                </label>
+            </div>
+            <!-- Highlighted User Card -->
+            <div class="px-4 py-2">
+                <div
+                    class="flex items-center gap-4 bg-primary/10 dark:bg-primary/20 border border-primary/20 dark:border-primary/30 rounded-xl p-4 min-h-[72px] justify-between shadow-sm">
+                    <div class="flex items-center gap-4">
+                        <img class="rounded-full h-14 w-14 object-cover" data-alt="Profile picture of the current user"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAcOVh2hHHeQhYJOoNLYRJZ7dWJH_iduPD-44eLVTcETYqQdTLrlUYCoxU9bXfgAzv5FrF5JUoKYulGFv9mqOFoo25Cuyo7lFc4af3ak-C_PDFVLgHQwtu6PrUNejvADMx4EJ2u-heb2nraP2oaBw9a2XQkQlLnVXY13rJtnyXQnovrqC__cjkI2okvWYPKz4swqxXI0rHx7Qf6zOXPuyQQu45i-GOWUR1GqXmzdqSo0e5lvp4dAc0sfJG47PcPOuQe9aNd9b3cg" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">
+                                Tu Posición: #128</p>
+                            <p class="text-primary dark:text-green-300 text-sm font-normal leading-normal line-clamp-2">
+                                TuUsuario</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-bold leading-normal">
+                            4,120 pts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-4"></div>
+            <!-- Leaderboard List -->
+            <div class="flex flex-col space-y-1 px-4 pb-8">
+                <!-- 1st Place -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="text-accent flex items-center justify-center shrink-0 size-12 font-bold text-lg">#1
+                        </div>
+                        <img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Alex"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfQXObU3D9jczcPsI_rmELl9oB5S_1VjSbs-6U2V1tz8i-bQlTdnXUJm71Vf-pnZRB0ukRbQJfWFSCUBBzLARzIOaPXHgXDaQxIOwYvH9nbiNfIeqsp1mOAlMrtDpQRRwWb3dZI99nykZOOZxHZzZXKs1rEWSNp_AEFDw_cfKR0LY8dXFD_MQ_6KzgZS1CPd_UoOyhUHWUBmX73Jo9FgxDRLxU515lDCyHpGtwT8mPUnFb_PL9t05EUfNVUuCQF-EKJ744UX2g2w" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1 flex items-center gap-2">
+                                Alex <span
+                                    class="material-symbols-outlined text-accent fill text-xl">workspace_premium</span>
+                            </p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">
+                                alex_climber</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-normal leading-normal">
+                            8,848 pts</p>
+                    </div>
+                </div>
+                <!-- 2nd Place -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="text-slate-400 dark:text-slate-500 flex items-center justify-center shrink-0 size-12 font-bold text-lg">
+                            #2</div>
+                        <img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Maria"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2HrCubyO6AlQKWQ1_2be-ElycVV5CwLxfpa7iWyx6u5HZGXPl26bKGH3RI1HQQ2BCdtw886AAB6gEBtQoGZici2IUUd-KCz9J6VPB2FjLJe3BsvvdJbhW3rIwFcaTvpeeITc-WEgK4muSWt3HbPOtfLBTNaj-99RgYJ9XAsgqvoeU2MgkIeNVWryZDmi51x9Kgi4SNsg3egj_QkrevuEy_0vnR4ne1tKFUcE9wuvVA6L1CxAjk5QWkLJzH5Rby4FGynhHoDFERA" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1 flex items-center gap-2">
+                                Maria <span
+                                    class="material-symbols-outlined text-slate-400 dark:text-slate-500 fill text-xl">workspace_premium</span>
+                            </p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">
+                                maria_peak</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-normal leading-normal">
+                            8,611 pts</p>
+                    </div>
+                </div>
+                <!-- 3rd Place -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="text-amber-600 dark:text-amber-700 flex items-center justify-center shrink-0 size-12 font-bold text-lg">
+                            #3</div>
+                        <img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Leo"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPVp_nP2gSPy0IVRP6GYvRIeBZAAaVGphP_8FdBKEl0WfseErRJpwwRGwY26yrfhAo4tDEcZamzYdAKTBvkrPbszB7za0GzdFdBSCZTcX-Jd9lorNWerI2X8ZUNrKkUuOu_VkDD6gf0ddVUoDu7pf_t2s4_1bnT8iXtXDd4gtFg5SNeCB1OQIajWZS8IVpytU0cSO9oOgjU2jkwKROimhkNmkieUBhglO3B6Ra8fxc6NemrOVs09Q_CQoqdMUs1qgUggdG4ZNNbA" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1 flex items-center gap-2">
+                                Leo <span
+                                    class="material-symbols-outlined text-amber-600 dark:text-amber-700 fill text-xl">workspace_premium</span>
+                            </p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">
+                                leo_rocks</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-normal leading-normal">
+                            8,125 pts</p>
+                    </div>
+                </div>
+                <!-- 4th Place -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="text-text-secondary-light dark:text-text-secondary-dark flex items-center justify-center shrink-0 size-12 font-medium">
+                            #4</div>
+                        <img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Sofia"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrGJOtJiPlpuUwYAfA51KUS1l2Z7GaB7Dey7-X3LCxTdgC_SosrLoihO_PrlMYI2RFuWbHSpG7Ye21ggwDO-wVHHRlmUVM6VtnaRv0JU-UDAtZbhkyEEAO-v_tVIVFD1fh4XJtK0FHbeyOfkgPIYEXuRPRbeOoIx1_ZJoAJxxnxCBa0PgiNsf5_sQqioM8aFd4-yFRRr9ZzLBS5eC3msaiEMKMi8SWKbnJNhtzSLoZnglmEBHno8YbuyyIopanz_8a6d0alcbovw" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">
+                                Sofia</p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">
+                                sofi_adventures</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-normal leading-normal">
+                            7,980 pts</p>
+                    </div>
+                </div>
+                <!-- 5th Place -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="text-text-secondary-light dark:text-text-secondary-dark flex items-center justify-center shrink-0 size-12 font-medium">
+                            #5</div>
+                        <img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Carlos"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2TSj2A8f2rxKVrllnpoG2LxK1y5fw0SWwNPil8S_rszRfGkRwbZ2_FSCXEyecuhVzDU8NU2ojlGzpo7hqExLKRldbhOn2mGp-srwsCKtE5TlpkOwYFl2IWmokuFXbEPwGnO3ddn_nIIC5XXDNXTzlbGm3Uw5s60cON3I7vBNTwZUss9bBt-CLq9jAz4XNnJJrWPGwY1lHBMwKSn1jv3j6cpPl1o9r7tXpI4BMBLXJgwIVEmpZu1xD09CXQeD1Sn0qvJalT_-CPw" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">
+                                Carlos</p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">
+                                carlos_hiker</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-normal leading-normal">
+                            7,543 pts</p>
+                    </div>
+                </div>
+                <!-- 6th Place -->
+                <div
+                    class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark px-4 min-h-[72px] py-2 justify-between rounded-lg">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="text-text-secondary-light dark:text-text-secondary-dark flex items-center justify-center shrink-0 size-12 font-medium">
+                            #6</div>
+                        <img class="rounded-full h-12 w-12 object-cover" data-alt="Profile picture of Ana"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM-Dk1pa1Xxp3AU6EsIutQym8F1kt_OEwGQEE0-9ejhryMQA_GjwegGeEnqNjE4szLS-S0ESBuRIFNZE5aE8fTkYfnwLcfMsJ8IoD0xn1XQjzJsvzg4dvnkM-rwKkXT__A1JHhh_Ysx_h3cwTR1CYPtuTkBPxWrLn8kq-a8c088K3zP4Fl1ArXzB-epls8cPxP6LRLLLILnpZcdgETz_tVdCg2N3qAJGt6ULsomRUVc4ueFXkB4amwhdw0vls-tRpepZJ3hMxmOg" />
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-text-primary-light dark:text-text-primary-dark text-base font-medium leading-normal line-clamp-1">
+                                Ana</p>
+                            <p
+                                class="text-text-secondary-light dark:text-text-secondary-dark text-sm font-normal leading-normal line-clamp-2">
+                                ana_explorer</p>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <p
+                            class="text-text-primary-light dark:text-text-primary-dark text-base font-normal leading-normal">
+                            7,120 pts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

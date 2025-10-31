@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Detalle de Cima</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2E4636",
+                        "background-light": "#F4F6F7",
+                        "background-dark": "#112111",
+                        "accent": "#D3A26A",
+                        "text-light": "#333333",
+                        "text-dark": "#EAEAEA",
+                        "text-muted-light": "#555555",
+                        "text-muted-dark": "#999999",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1A2B1A",
+                        "border-light": "#E0E0E0",
+                        "border-dark": "#334333"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- HeaderImage Component -->
+        <div class="@container">
+            <div class="@[480px]:px-4 @[480px]:py-3">
+                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-xl min-h-80"
+                    data-alt="A majestic, snow-capped mountain peak against a clear blue sky."
+                    style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCraHaRKzroQ61q_OhFJDcZvA_Vt4LcIqNR-TKW0Osjb-xWT27HmH14NoWrrIocmmm-mXD6Lui1iAeUcG9dvdom4Hd0k4MVLInKSe8pdKxEeazhDUsInqnJUi79OzmUfq3W1Vyz58SW9BikFSglVouOyQmnAIo2fqbq0TVAzsRi63bfmXOm5WfuL94dRfctW0qzVqY2sddOAjCZXtbOnM05sk6UC_rxxM81y_r43s5gXlrlZDQmJqP3jGJZcilCvNxLV88vpqmtzw");'>
+                    <div class="flex flex-col p-6 gap-1">
+                        <p class="text-white tracking-tight text-3xl font-bold leading-tight">Monte Perdido</p>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-white text-base">location_on</span>
+                            <p class="text-white/90 text-sm font-normal">Pirineos, España</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DescriptionList Component (Modified as Quick Data Icons) -->
+        <div class="p-4 grid grid-cols-3 gap-2">
+            <div
+                class="flex flex-col items-center gap-2 rounded-lg bg-card-light dark:bg-card-dark p-3 text-center border border-border-light dark:border-border-dark">
+                <span class="material-symbols-outlined text-accent text-2xl">trending_up</span>
+                <p class="text-text-muted-light dark:text-text-muted-dark text-xs font-normal leading-normal">Altitud
+                </p>
+                <p class="text-sm font-bold leading-normal">3.355 m</p>
+            </div>
+            <div
+                class="flex flex-col items-center gap-2 rounded-lg bg-card-light dark:bg-card-dark p-3 text-center border border-border-light dark:border-border-dark">
+                <span class="material-symbols-outlined text-accent text-2xl">hiking</span>
+                <p class="text-text-muted-light dark:text-text-muted-dark text-xs font-normal leading-normal">Dificultad
+                </p>
+                <p class="text-sm font-bold leading-normal">Difícil</p>
+            </div>
+            <div
+                class="flex flex-col items-center gap-2 rounded-lg bg-card-light dark:bg-card-dark p-3 text-center border border-border-light dark:border-border-dark">
+                <span class="material-symbols-outlined text-accent text-2xl">straighten</span>
+                <p class="text-text-muted-light dark:text-text-muted-dark text-xs font-normal leading-normal">Distancia
+                </p>
+                <p class="text-sm font-bold leading-normal">15 km</p>
+            </div>
+        </div>
+        <!-- SingleButton Component -->
+        <div class="flex px-4 py-3">
+            <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+                <span class="truncate">Registrar Ascensión</span>
+            </button>
+        </div>
+        <!-- SegmentedButtons Component -->
+        <div class="flex px-4 py-3">
+            <div
+                class="flex h-10 flex-1 items-center justify-center rounded-xl bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark p-1">
+                <label
+                    class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:shadow-sm has-[:checked]:text-text-light dark:has-[:checked]:text-text-dark text-text-muted-light dark:text-text-muted-dark text-sm font-medium leading-normal transition-colors">
+                    <span class="truncate">Información</span>
+                    <input class="invisible w-0" name="content-segment" type="radio" value="Información" />
+                </label>
+                <label
+                    class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-card-light dark:has-[:checked]:bg-card-dark has-[:checked]:shadow-sm has-[:checked]:text-text-light dark:has-[:checked]:text-text-dark text-text-muted-light dark:text-text-muted-dark text-sm font-medium leading-normal transition-colors">
+                    <span class="truncate">Historial Personal</span>
+                    <input checked="" class="invisible w-0" name="content-segment" type="radio"
+                        value="Historial Personal" />
+                </label>
+            </div>
+        </div>
+        <!-- SectionHeader Component -->
+        <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Mis Ascensiones</h3>
+        <!-- History Cards Section (New Component) -->
+        <div class="flex flex-col gap-3 px-4 pb-6">
+            <!-- History Card 1 -->
+            <div
+                class="flex items-start gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 border border-border-light dark:border-border-dark">
+                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <span class="material-symbols-outlined text-primary text-2xl">calendar_month</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="font-bold">15 de Agosto, 2023</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Duración: 8h 15min</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-1">Un día espectacular, con
+                        vistas despejadas desde la cima. ¡Inolvidable!</p>
+                </div>
+            </div>
+            <!-- History Card 2 -->
+            <div
+                class="flex items-start gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 border border-border-light dark:border-border-dark">
+                <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <span class="material-symbols-outlined text-primary text-2xl">calendar_month</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <p class="font-bold">22 de Julio, 2021</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Duración: 9h 30min</p>
+                    <p class="text-text-muted-light dark:text-text-muted-dark text-sm mt-1">Ascensión con un poco de
+                        niebla en la parte final. El descenso fue más lento de lo esperado.</p>
+                </div>
+            </div>
+            <!-- Empty State Example (Commented out, but here for reference) -->
+            <!--
+      <div class="flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-8 text-center mt-2">
+        <span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark text-5xl">landscape</span>
+        <p class="font-bold text-text-light dark:text-text-dark">Aún no has coronado esta cima</p>
+        <p class="text-text-muted-light dark:text-text-muted-dark text-sm max-w-xs">¡Anímate a registrar tu primera ascensión para que aparezca aquí!</p>
+      </div>
+      -->
+        </div>
+    </div>
+</body>
+
+</html>

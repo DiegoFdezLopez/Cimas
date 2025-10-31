@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Perfil de Usuario - App de Montañismo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8A9A87",
+                        "background-light": "#F7F8FA",
+                        "background-dark": "#1a1c1e",
+                        "accent": "#F2A900",
+                        "text-light": "#333333",
+                        "text-dark": "#e0e2e4",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#242629",
+                        "border-light": "#e3e5e8",
+                        "border-dark": "#393c3f"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <!-- Header / Cabecera -->
+        <header class="relative w-full">
+            <div class="bg-center bg-no-repeat aspect-[3/1] bg-cover w-full"
+                data-alt="A panoramic view of a mountain range at sunrise"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9xRsATnois-wD_lKn1m18nJuKP8oJb_JX7DIvv61Ze-CGXzEV7Hh_xmhYh-ywHrRemVYBGrEvxHDSMM8wF1LTzFe0YPRGu2aDUUFlIc2ZPkgEUb_6YHhTh_nP03O5JNYbm1gpBCcLtk7MoLD8itCBRpDYf3jup6olQNb4RR6PBezjqSnLXqYaTN2HQFDNAOO28vCpPedwZWIlSitDw_eYeLqva_6ax4d3QsNpTtPmuDHb65zXDPQ0ucWyuVYQFsWUUJxsWAoR7A");'>
+            </div>
+            <div class="absolute -bottom-16 left-1/2 -translate-x-1/2 w-full px-4">
+                <div class="flex flex-col items-center">
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-background-light dark:border-background-dark -mb-16"
+                        data-alt="Portrait of a hiker smiling"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9lLJaXne47pEClKeQB4rt62AajE7htSzg1rIFkctEhNwWHg6YUBa9IC95omjhH6pGTAwCo_oCB_yuiUCDkWFklF6QmqWWyUqheWGdPYQ0f3tNq1ifFErn0J7gQiJJ6fBM7u_RlUdJ2SNVLVBw8qd-ZXSOWq1l-QFtTwTxSK0igivSgBAjoP0dZxp5sZxM9j1Xcs4_XTDxQoxuk8yvamHKlxzytHKRsINI-OSy90BZrREFeFsExdnyMGjSp2y2JU3u11Glbs0WQw");'>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="absolute top-4 right-4 flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-black/30 text-white backdrop-blur-sm">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </header>
+        <main class="pt-20 pb-24 px-4 @container">
+            <!-- Profile Info -->
+            <div class="flex w-full flex-col gap-1 items-center mb-6">
+                <h1 class="text-2xl font-bold tracking-tight text-center text-text-light dark:text-text-dark">Alex Roca
+                </h1>
+                <p class="text-base font-normal text-primary text-center">Pirineos, España</p>
+            </div>
+            <!-- Panel de Estadísticas Clave -->
+            <div class="grid grid-cols-2 @[480px]:grid-cols-4 gap-4 mb-8">
+                <div
+                    class="flex flex-col gap-1 rounded-xl p-4 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark items-center text-center">
+                    <span class="material-symbols-outlined text-primary text-3xl">landscape</span>
+                    <p class="text-sm font-medium">Cimas</p>
+                    <p class="text-2xl font-bold tracking-tight">42</p>
+                </div>
+                <div
+                    class="flex flex-col gap-1 rounded-xl p-4 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark items-center text-center">
+                    <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+                    <p class="text-sm font-medium">Desnivel</p>
+                    <p class="text-2xl font-bold tracking-tight">8,848m</p>
+                </div>
+                <div
+                    class="flex flex-col gap-1 rounded-xl p-4 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark items-center text-center">
+                    <span class="material-symbols-outlined text-primary text-3xl">route</span>
+                    <p class="text-sm font-medium">Distancia</p>
+                    <p class="text-2xl font-bold tracking-tight">150km</p>
+                </div>
+                <div
+                    class="flex flex-col gap-1 rounded-xl p-4 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark items-center text-center">
+                    <span class="material-symbols-outlined text-primary text-3xl">emoji_events</span>
+                    <p class="text-sm font-medium">Logros</p>
+                    <p class="text-2xl font-bold tracking-tight">12</p>
+                </div>
+            </div>
+            <!-- Sección de Logros -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center pb-3">
+                    <h2 class="text-xl font-bold tracking-tight">Logros Recientes</h2>
+                    <button class="flex items-center gap-1 cursor-pointer text-sm font-bold text-primary">
+                        <span class="truncate">Ver todos</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+                <div
+                    class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden -mx-4 px-4">
+                    <div class="flex items-stretch gap-4">
+                        <div class="flex flex-col gap-3 text-center rounded-lg w-28 shrink-0">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                                data-alt="Gold medal icon for reaching a 3000m peak"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXbGsmYB-JTlgx0e1vGGJOGOd607kjamGOPuhGnBE9efvQ36ZiyF3xA2lhY2K4xLOxMQP7XrXU8Lgj9ffF9E3uASOdleMujXfxRjmn7-YNpCCxqc5rMiCcgxH5leq060Q5Fqk0BN6bzg-CKew3X2QBTlqzWlvPB3fAqZMrNt8rvgQQggQPiQ1XorTjolq24QhkFHhpyGJklwVfAIViwwwc2v8rvmLu_DtLxNvL5rgEXqnabaQN8Hnq3vCJ6BXkC4SpoWcufDgTtQ");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Primer 3000m</p>
+                                <p class="text-xs text-primary">Desbloqueado</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 text-center rounded-lg w-28 shrink-0">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                                data-alt="Crown icon for conquering a mountain ridge"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVrAJxItG69Zwt1Zn2nFJOATzEbGNgKiXgOmel55hN8x7Oj-qd-kzciJeEhT7d9v5yh4A7nP7e66sAxiGDKf6O9HT9on41NMtHBK8zqKHiHoOR2XryNMcmL6iZ0GYHTs5VlrBkyzTM30tybC6R1kIbxjzqL33o8o961_wGl1EGHpMG0XFjxkp7P8O-nDTONkwH4uwVJ9H8sic9Oc8bERAXWlD17_Kf36VARduz0U3zcGSO7BCgnO6Qc1nSTxZ5HKd5Bmjt8oqvuA");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Rey de la Cresta</p>
+                                <p class="text-xs text-primary">Desbloqueado</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 text-center rounded-lg w-28 shrink-0">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                                data-alt="Sun icon for an early morning start"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkVZOB-W0FO0Cq9_4jAanB4LObBRAyKzvhK4YPUbo_zV2EuFg5ch76q9Z68MXX0DNNTVQGWxeR7wg_rsWpfbgnAd5lHloOVLj6P7pc1lWPlNGCpMKxqZTFS9Jw_BA7BP6TG20uKsjKTvjrIsBZvLn8Me9xxWk5ZU3GlbLG1WhEsRd0eh-zWC7DMXk50-evYSUfm63BWelcDbXCoFx1D853tx4mwcZtXfXlMyC4PihhtCW_no23n499b-8nGHmKSwKY6dXYt0tdsQ");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Madrugador</p>
+                                <p class="text-xs text-primary">Desbloqueado</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 text-center rounded-lg w-28 shrink-0">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full"
+                                data-alt="Compass icon representing exploration"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_jMcY-H328nMv-iGg0Td1iskfXPug-YSQzWWUUKnu2AbWEghXhBj2-NWsMTHzrWSsuFTAzlbvZeD00wagFZXtAzU0BvPV152sPiBFOm5fmQjEoh51mwnsPu7R4X6ilYB8bibJEV0WlLIeMoiR3mcPyOJJw0U0ulruwwt2JMpjLxow9i2jl2oGNqlRKFUf_CCTGnHywoMo2HpUNrtM9RbhH7yTeFuiWel-5BSe6FyP_FbxWPpaYWY7c-OKGXEPlW5Lbb2rX8UTHA");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Explorador</p>
+                                <p class="text-xs text-gray-500">Bloqueado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de Cimas Ascendidas -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center pb-3">
+                    <h2 class="text-xl font-bold tracking-tight">Cimas Ascendidas</h2>
+                    <button class="flex items-center gap-1 cursor-pointer text-sm font-bold text-primary">
+                        <span class="truncate">Ver historial</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div
+                        class="flex items-center gap-4 p-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+                        <div class="w-16 h-16 rounded bg-cover bg-center shrink-0"
+                            data-alt="Photo of the summit of Monte Perdido"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1584oQW0jpcrO6I5lbrP-ZK4OF2fZYD0w7fQc85WstXU5pYqFzetYNaP9Cr46nYqjEAflw_DItY3F6DYMr3HVJEFTWracErzjtltl0Re2cql-9kv4BxH2SmvjRNLL-GnyCxqAKhBA8UFhm65p610uczcrFAHrE-dYcWS75swywxOs94Svo5tu6OUzHcya9zEqZRTLVokdniXoW1OUa6JpZ5pQ7p1dt1t5EvWUvcTtggdRV5EuAejRr_ynTuZjESxpIPKNOi2QDQ');">
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold">Monte Perdido</p>
+                            <p class="text-sm text-text-light/70 dark:text-text-dark/70">15 de Julio, 2023</p>
+                        </div>
+                        <p class="font-semibold text-primary">3,355 m</p>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 p-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark">
+                        <div class="w-16 h-16 rounded bg-cover bg-center shrink-0"
+                            data-alt="Photo of the summit of Aneto"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFSu4HFxbeXy442JPwaAuYBbnBHttKUq6yHcaEBQ95MdrHjfPtipp2WGcbIFh8ENTMstOzKk_rxxk7nm3HhWVJxYSPmOzhyJ1giG-UaCqLPkLexXT11HygyfWMrLeHSjhhBxqtTocgqfo68ztDHGadQZqyvT0I50RHrEUlpWe8VazeUvgF9aXEW-of36LV0nbWLtN1jTAXWsIigG2W9Wgc4GXd0g0XwXtz6ZxERJgTQGit0owUOCwvstr-X6wAc7tXmEjG09eeoQ');">
+                        </div>
+                        <div class="flex-grow">
+                            <p class="font-bold">Aneto</p>
+                            <p class="text-sm text-text-light/70 dark:text-text-dark/70">2 de Junio, 2023</p>
+                        </div>
+                        <p class="font-semibold text-primary">3,404 m</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de Amigos -->
+            <div>
+                <div class="flex justify-between items-center pb-3">
+                    <h2 class="text-xl font-bold tracking-tight">Amigos</h2>
+                    <button class="flex items-center gap-1 cursor-pointer text-sm font-bold text-primary">
+                        <span class="truncate">Gestionar</span>
+                        <span class="material-symbols-outlined">group</span>
+                    </button>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="flex -space-x-4">
+                        <div class="w-12 h-12 rounded-full border-2 border-background-light dark:border-background-dark bg-cover bg-center"
+                            data-alt="Avatar of a friend named Sarah"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXTiG0Q1q0RA37CfSICCVv9I2Vu-JxQ3Kuqkw14iFFTBh7aQR2uvqo7tGcPENulnizuvXDJG61flS11CdMEZO0FjrzE1WdifKem66cBS5NA9TumICXn1KVa7q1ItS8qwnfyO5CVGxQK1hEMFa8yminQ1rAuxKxLVaw0vSNq9Do7MxgP3dt1Du1gfE5Y3majMiplkeoSVWT0NZGbu1vWZfFKe3a_GzMpzXJDGXsV9B05ov3DgbKPKJOdnajwshl3lHFVpKDw7weJA')">
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-background-light dark:border-background-dark bg-cover bg-center"
+                            data-alt="Avatar of a friend named Michael"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3iROddecheJHC7tfo0pJo3UcXVWTtOv1NkJm2I9A0Io0NEK4zWoELyjT5Diy-kOdxCJ6__o43gJWhSoGmSZf1UENgwPMwmRTTjubiYKetSL1FXO-M_iju0FgPo8QdUm1DwEXuD_q3s30MGWmrmdqP35RKXPjouszLLIOMWrrBW0gcWAZCbk6WHIKZExObUWgSTC50f-yOFuMyzdpqw4cCi9YiC0tL4j46ErWN_Zj7or7OvloT74RM8sxc_Rfe8xQa8rGDJNI2VQ')">
+                        </div>
+                        <div class="w-12 h-12 rounded-full border-2 border-background-light dark:border-background-dark bg-cover bg-center"
+                            data-alt="Avatar of a friend named Emily"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWHArsUOQAk8T-v8xaXIEJdFythgYud8u2WqgPidSYE1C12oyw6yOlr478DZXRdTewhUs4IpjOeqvxbIvKGmybZNmmfR0slGpDAZN384xJsPsstsy_ZdbUAO8lha84i4Rux10KtEiDI_KnavkaMtI4Q74f1w1hyChGfRr2I64j_GEAhxO_sedg2pgpZknJ3kOR5B1-UM0-RQZAfSiWOjt7Irn6AT3E55kIs-6GtnndVXPPOrVqNvB_BSbGDwXGNNQiPfKCdlsMKQ')">
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-background-light dark:border-background-dark bg-cover bg-center flex items-center justify-center bg-gray-200 text-gray-600 font-bold">
+                            <span>+5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Barra de Navegación Inferior -->
+        <nav
+            class="fixed bottom-0 left-0 right-0 h-20 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-lg border-t border-border-light dark:border-border-dark">
+            <div class="flex justify-around items-center h-full max-w-lg mx-auto">
+                <a class="flex flex-col items-center justify-center text-text-light/60 dark:text-text-dark/60" href="#">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="text-xs">Inicio</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-text-light/60 dark:text-text-dark/60" href="#">
+                    <span class="material-symbols-outlined">explore</span>
+                    <span class="text-xs">Explorar</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-primary" href="#">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-xs font-bold">Perfil</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-text-light/60 dark:text-text-dark/60" href="#">
+                    <span class="material-symbols-outlined">leaderboard</span>
+                    <span class="text-xs">Ranking</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

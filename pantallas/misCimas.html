@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mis Cimas - Aplicación de Montañismo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3A7D44",
+                        "secondary": "#34495E",
+                        "background-light": "#F4F6F6",
+                        "background-dark": "#121A1A",
+                        "text-light": "#2C3E50",
+                        "text-dark": "#EAECEC",
+                        "muted-light": "#BDC3C7",
+                        "muted-dark": "#7B868C"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="relative mx-auto max-w-lg">
+        <!-- Top App Bar -->
+        <div
+            class="sticky top-0 z-10 flex flex-col gap-2 bg-background-light/80 p-4 pb-2 backdrop-blur-sm dark:bg-background-dark/80">
+            <div class="flex h-12 items-center justify-between">
+                <div class="flex size-12 shrink-0 items-center">
+                    <div class="aspect-square size-10 rounded-full bg-cover bg-center" data-alt="Avatar de Alex"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGTifastquTUJanICFJstWQc9ngWzRz29z_JHWPXqG9qSeQWVvKI0Ukv7FP3_oEB3xQZU1_XtdjnWlkNOmUbq7FPJCw5qaNUHoBJwl7tdtQkvNz2owrKaGyiWw-dJ7DaGsiem99wfg6Wincah2YWX4bw9PVqyMrDvWdL_oBslp01F8QF2BAC9R-0EwE-fbQVIfNr6YJ7hXdAmzXCcfGKDWJO8k7Si9VhJ3FNHVrFfdgTjTY8_PQeReGG0EkpxGbqZDaX29e6dNJA");'>
+                    </div>
+                </div>
+                <div class="flex w-12 items-center justify-end">
+                    <button
+                        class="flex h-12 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl bg-transparent text-text-light dark:text-text-dark min-w-0 p-0">
+                        <span class="material-symbols-outlined text-3xl">map</span>
+                    </button>
+                </div>
+            </div>
+            <p class="text-text-light dark:text-text-dark text-[28px] font-bold leading-tight">Mis Cimas</p>
+        </div>
+        <!-- Summary Card with Progress Bar -->
+        <div class="p-4 @container">
+            <div
+                class="flex flex-col items-stretch justify-start rounded-xl bg-secondary/10 p-4 dark:bg-secondary/20 @xl:flex-row @xl:items-start">
+                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-3">
+                    <p class="text-secondary dark:text-text-dark/80 text-sm font-normal leading-normal">¡Hola, Alex!</p>
+                    <p class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">
+                        15/120 Cimas Ascendidas</p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-secondary dark:text-text-dark/80 text-base font-normal leading-normal">Tu
+                                progreso general</p>
+                            <p class="text-text-light dark:text-text-dark text-sm font-normal leading-normal">12.5%</p>
+                        </div>
+                        <div class="rounded-full bg-secondary/20 dark:bg-secondary/40">
+                            <div class="h-2 rounded-full bg-primary" style="width: 12.5%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Filters and Search -->
+        <div class="sticky top-[116px] z-10 bg-background-light/80 pt-2 backdrop-blur-sm dark:bg-background-dark/80">
+            <div class="flex px-4 py-3">
+                <div
+                    class="flex h-10 flex-1 items-center justify-center rounded-lg bg-secondary/10 p-1 dark:bg-secondary/20">
+                    <label
+                        class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 text-secondary has-[:checked]:bg-background-light has-[:checked]:text-text-light has-[:checked]:shadow-sm dark:text-text-dark/60 dark:has-[:checked]:bg-background-dark/80 dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal">
+                        <span class="truncate">Todas</span>
+                        <input checked="" class="invisible w-0" name="filter-cimas" type="radio" value="Todas" />
+                    </label>
+                    <label
+                        class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 text-secondary has-[:checked]:bg-background-light has-[:checked]:text-text-light has-[:checked]:shadow-sm dark:text-text-dark/60 dark:has-[:checked]:bg-background-dark/80 dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal">
+                        <span class="truncate">Ascendidas</span>
+                        <input class="invisible w-0" name="filter-cimas" type="radio" value="Ascendidas" />
+                    </label>
+                    <label
+                        class="flex h-full grow cursor-pointer items-center justify-center overflow-hidden rounded-md px-2 text-secondary has-[:checked]:bg-background-light has-[:checked]:text-text-light has-[:checked]:shadow-sm dark:text-text-dark/60 dark:has-[:checked]:bg-background-dark/80 dark:has-[:checked]:text-text-dark text-sm font-medium leading-normal">
+                        <span class="truncate">Pendientes</span>
+                        <input class="invisible w-0" name="filter-cimas" type="radio" value="Pendientes" />
+                    </label>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 px-4 py-3">
+                <label class="flex h-12 min-w-40 w-full flex-col">
+                    <div class="flex h-full w-full flex-1 items-stretch rounded-lg">
+                        <div
+                            class="text-secondary dark:text-text-dark/60 flex items-center justify-center rounded-l-lg border-none border-r-0 bg-secondary/10 pl-4 dark:bg-secondary/20">
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <input
+                            class="form-input flex h-full min-w-0 flex-1 w-full resize-none overflow-hidden rounded-r-lg border-none bg-secondary/10 px-4 pl-2 text-base font-normal leading-normal text-text-light placeholder:text-secondary focus:outline-0 focus:ring-0 dark:bg-secondary/20 dark:text-text-dark dark:placeholder:text-text-dark/60"
+                            placeholder="Buscar una cima por nombre" value="" />
+                    </div>
+                </label>
+                <button
+                    class="flex h-12 w-12 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-text-dark/60">
+                    <span class="material-symbols-outlined">swap_vert</span>
+                </button>
+            </div>
+        </div>
+        <!-- Peak List -->
+        <div class="flex flex-col gap-3 px-4 pb-28 pt-2">
+            <!-- Ascended Peak Item Card -->
+            <div class="flex cursor-pointer items-center gap-4 rounded-xl bg-primary/10 p-3 dark:bg-primary/20">
+                <div
+                    class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30">
+                    <span class="material-symbols-outlined text-3xl text-primary dark:text-primary/90">flag</span>
+                </div>
+                <div class="flex grow flex-col">
+                    <p class="font-bold text-text-light dark:text-text-dark">Pico Aneto</p>
+                    <p class="text-sm text-secondary dark:text-text-dark/80">3.404 m - Pirineos, Huesca</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary dark:text-text-dark/60">chevron_right</span>
+            </div>
+            <!-- Pending Peak Item Card -->
+            <div class="flex cursor-pointer items-center gap-4 rounded-xl bg-secondary/5 p-3 dark:bg-secondary/10">
+                <div
+                    class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-muted-light/50 dark:bg-muted-dark/20">
+                    <span
+                        class="material-symbols-outlined text-3xl text-muted-light dark:text-muted-dark">location_on</span>
+                </div>
+                <div class="flex grow flex-col">
+                    <p class="font-bold text-text-light dark:text-text-dark">Mulhacén</p>
+                    <p class="text-sm text-secondary dark:text-text-dark/80">3.479 m - Sierra Nevada, Granada</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary dark:text-text-dark/60">chevron_right</span>
+            </div>
+            <!-- Ascended Peak Item Card -->
+            <div class="flex cursor-pointer items-center gap-4 rounded-xl bg-primary/10 p-3 dark:bg-primary/20">
+                <div
+                    class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/20 dark:bg-primary/30">
+                    <span class="material-symbols-outlined text-3xl text-primary dark:text-primary/90">flag</span>
+                </div>
+                <div class="flex grow flex-col">
+                    <p class="font-bold text-text-light dark:text-text-dark">Teide</p>
+                    <p class="text-sm text-secondary dark:text-text-dark/80">3.718 m - Tenerife, Islas Canarias</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary dark:text-text-dark/60">chevron_right</span>
+            </div>
+            <!-- Pending Peak Item Card -->
+            <div class="flex cursor-pointer items-center gap-4 rounded-xl bg-secondary/5 p-3 dark:bg-secondary/10">
+                <div
+                    class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-muted-light/50 dark:bg-muted-dark/20">
+                    <span
+                        class="material-symbols-outlined text-3xl text-muted-light dark:text-muted-dark">location_on</span>
+                </div>
+                <div class="flex grow flex-col">
+                    <p class="font-bold text-text-light dark:text-text-dark">Pica d'Estats</p>
+                    <p class="text-sm text-secondary dark:text-text-dark/80">3.143 m - Pirineos, Lérida</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary dark:text-text-dark/60">chevron_right</span>
+            </div>
+            <!-- Pending Peak Item Card -->
+            <div class="flex cursor-pointer items-center gap-4 rounded-xl bg-secondary/5 p-3 dark:bg-secondary/10">
+                <div
+                    class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-muted-light/50 dark:bg-muted-dark/20">
+                    <span
+                        class="material-symbols-outlined text-3xl text-muted-light dark:text-muted-dark">location_on</span>
+                </div>
+                <div class="flex grow flex-col">
+                    <p class="font-bold text-text-light dark:text-text-dark">Torre Cerredo</p>
+                    <p class="text-sm text-secondary dark:text-text-dark/80">2.650 m - Picos de Europa, Asturias</p>
+                </div>
+                <span class="material-symbols-outlined text-secondary dark:text-text-dark/60">chevron_right</span>
+            </div>
+        </div>
+        <!-- Floating Action Button -->
+        <div class="fixed bottom-24 right-4 z-20">
+            <button
+                class="flex h-16 w-16 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-primary text-white shadow-lg dark:text-background-dark">
+                <span class="material-symbols-outlined text-4xl">add</span>
+            </button>
+        </div>
+        <!-- Bottom Tab Bar -->
+        <div class="fixed bottom-0 z-20 w-full max-w-lg">
+            <div
+                class="mx-4 mb-4 rounded-xl border border-secondary/10 bg-background-light/80 p-2 shadow-lg backdrop-blur-sm dark:border-secondary/20 dark:bg-background-dark/80">
+                <div class="flex items-center justify-around">
+                    <a class="flex flex-1 cursor-pointer flex-col items-center gap-1 rounded-lg p-2 text-primary"
+                        href="#">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="text-xs font-medium">Inicio</span>
+                    </a>
+                    <a class="flex flex-1 cursor-pointer flex-col items-center gap-1 rounded-lg p-2 text-secondary/60 dark:text-text-dark/60"
+                        href="#">
+                        <span class="material-symbols-outlined">map</span>
+                        <span class="text-xs font-medium">Mapa</span>
+                    </a>
+                    <a class="flex flex-1 cursor-pointer flex-col items-center gap-1 rounded-lg p-2 text-secondary/60 dark:text-text-dark/60"
+                        href="#">
+                        <span class="material-symbols-outlined">leaderboard</span>
+                        <span class="text-xs font-medium">Rankings</span>
+                    </a>
+                    <a class="flex flex-1 cursor-pointer flex-col items-center gap-1 rounded-lg p-2 text-secondary/60 dark:text-text-dark/60"
+                        href="#">
+                        <span class="material-symbols-outlined">person</span>
+                        <span class="text-xs font-medium">Perfil</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Registro - Aplicación de Montañismo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A6C6F", // Verde bosque apagado
+                        "background-light": "#F7F9F9", // Blanco roto
+                        "background-dark": "#1A202C", // Gris oscuro para modo oscuro
+                        "text-primary-light": "#2D3748", // Gris oscuro casi negro
+                        "text-primary-dark": "#E2E8F0", // Gris claro para modo oscuro
+                        "text-secondary-light": "#A0AEC0", // Gris medio
+                        "text-secondary-dark": "#718096", // Gris medio oscuro
+                        "border-light": "#E2E8F0", // Borde claro
+                        "border-dark": "#4A5568", // Borde oscuro
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-center p-4"
+        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWJIc-6GtigYvCJr8541A3uSYNridKOrGqYDSN1Y2YaYIHl-k_FI8m6CJ0-K4p4RYWtrij-YVbeFX2m6BacWSLIhLv_jjzbHO5Sw8qyhGH0Dt5wkWImd4EI6F1AicYEXNIgQoHNXp2VInlyvTDbBZc0iGA8totRijoCUelIWcKfxmWt7Wlo7lb3f5QK3cfoG27nOlOW9dOV18N6rt9yRYFDYTXPGs1khn-Y_FynyuT0j93j3FnGRwPOl7Q1_mmR-2h9dSU1MI6Yw');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gray-900/70"></div>
+        <!-- Bottom Sheet Modal -->
+        <div class="relative flex w-full max-w-md flex-col justify-end">
+            <div
+                class="flex flex-col overflow-hidden rounded-t-xl bg-background-light dark:bg-background-dark shadow-2xl">
+                <!-- Handle -->
+                <div class="flex h-8 w-full items-center justify-center pt-4">
+                    <div class="h-1.5 w-10 rounded-full bg-border-light dark:bg-border-dark"></div>
+                </div>
+                <!-- Header -->
+                <div class="flex items-center justify-between p-6 pb-2">
+                    <h1 class="text-3xl font-bold tracking-tight text-text-primary-light dark:text-text-primary-dark">
+                        Únete a la Aventura</h1>
+                    <button
+                        class="text-text-secondary-light hover:text-text-primary-light dark:text-text-secondary-dark dark:hover:text-text-primary-dark">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <!-- Form Content -->
+                <div class="flex flex-col gap-1 p-6 pt-4">
+                    <form action="#" class="flex flex-col gap-4" method="POST">
+                        <!-- Nombre de Usuario -->
+                        <label class="flex flex-col">
+                            <p class="pb-2 text-base font-medium text-text-primary-light dark:text-text-primary-dark">
+                                Nombre de Usuario</p>
+                            <input
+                                class="form-input h-14 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-4 text-base font-normal leading-normal text-text-primary-light placeholder:text-text-secondary-light focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-primary-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary"
+                                placeholder="Elige tu nombre de aventurero" />
+                        </label>
+                        <!-- Correo Electrónico -->
+                        <label class="flex flex-col">
+                            <p class="pb-2 text-base font-medium text-text-primary-light dark:text-text-primary-dark">
+                                Correo Electrónico</p>
+                            <input
+                                class="form-input h-14 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-4 text-base font-normal leading-normal text-text-primary-light placeholder:text-text-secondary-light focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-primary-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary"
+                                placeholder="tu.email@ejemplo.com" type="email" />
+                        </label>
+                        <!-- Contraseña -->
+                        <label class="flex flex-col">
+                            <p class="pb-2 text-base font-medium text-text-primary-light dark:text-text-primary-dark">
+                                Contraseña</p>
+                            <div class="relative flex w-full items-center">
+                                <input
+                                    class="form-input h-14 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-border-light bg-background-light p-4 pr-12 text-base font-normal leading-normal text-text-primary-light placeholder:text-text-secondary-light focus:border-primary focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:border-border-dark dark:bg-background-dark dark:text-text-primary-dark dark:placeholder:text-text-secondary-dark dark:focus:border-primary"
+                                    placeholder="Crea una contraseña segura" type="password" />
+                                <button
+                                    class="absolute right-0 flex h-full items-center justify-center px-4 text-text-secondary-light dark:text-text-secondary-dark"
+                                    type="button">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </button>
+                            </div>
+                        </label>
+                        <!-- CTA Button -->
+                        <button
+                            class="mt-4 flex h-14 w-full items-center justify-center rounded-lg bg-primary text-lg font-bold text-white transition-transform duration-200 ease-in-out hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
+                            type="submit">
+                            Crear Cuenta
+                        </button>
+                    </form>
+                    <!-- Divider -->
+                    <div class="my-4 flex items-center gap-4">
+                        <hr class="w-full border-t border-border-light dark:border-border-dark" />
+                        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark">O</span>
+                        <hr class="w-full border-t border-border-light dark:border-border-dark" />
+                    </div>
+                    <!-- Social Login -->
+                    <div class="flex flex-col gap-3 sm:flex-row">
+                        <button
+                            class="flex h-12 flex-1 items-center justify-center gap-3 rounded-lg border border-border-light bg-background-light text-text-primary-light transition-colors hover:bg-gray-100 dark:border-border-dark dark:bg-gray-700 dark:text-text-primary-dark dark:hover:bg-gray-600">
+                            <img alt="Google logo" class="h-6 w-6"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa93UYP1iIcb9pJWYnZYjGPx_CeZwobQjGFdK93VDEstxGy0DRX9CIsE1FYkfGeHxO0GcALXahij3bbu_9MxfOCgNuBHi1799K6eGdB_1vFzivQclw4u7x8Z878npGPYZGAaxddWMH7jjZfHMFCUN509qB0l20YPKXJCDmqT0e3qUOOacIzM37p42AU1eqnMpKTsCIqDtsDa2aWc4jriTYYiGBGLHo2eJ_6sC8vHjKn-ibXF85jmaw4jBFYqDw9Io9jWoc6pNeoQ" />
+                            <span>Google</span>
+                        </button>
+                        <button
+                            class="flex h-12 flex-1 items-center justify-center gap-3 rounded-lg border border-border-light bg-background-light text-text-primary-light transition-colors hover:bg-gray-100 dark:border-border-dark dark:bg-gray-700 dark:text-text-primary-dark dark:hover:bg-gray-600">
+                            <img alt="Apple logo" class="h-6 w-6 dark:invert"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxnJsChzXGNVFMuBF-Sb1MVoRycrMp-v5hyt8W5ZPU_mbexYFoko0QAnnsVzj7t9Dko9Pw3VQUJChkfNkXo79R_tG6wQGAgwRufStl-kNk425ThAQyVt_D78xX4ITJC6Sd5B-zNN6JvQ0vP-oW_cRbS7fZlmivNaix7DzBOG3be6BdIpLtIdrusbKG-zjhyxjKnHfpjIaJm-DGFD-ZnTgFqlHPr8W4Pz04lHHgzT2XfHsjP8_y5Y0yjvf8niT6smEFupG4Rmisqg" />
+                            <span>Apple</span>
+                        </button>
+                    </div>
+                    <!-- Login Link -->
+                    <p class="mt-6 text-center text-sm text-text-secondary-light dark:text-text-secondary-dark">
+                        ¿Ya tienes una cuenta? <a class="font-bold text-primary hover:underline" href="#">Inicia
+                            sesión</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
